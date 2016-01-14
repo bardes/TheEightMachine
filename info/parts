@@ -1,0 +1,14 @@
+[ok] 1 lm2936    TO-92       Regulador de tensão
+[  ] 1 atmega8   TQFP-32A    Microcontrolador 
+[  ] 1 lm386     SOIC-8      Speaker Driver
+[ok] 1 7seg-disp ---         Anodo Comum 2.3"
+[ok] 1 uln2003   SOIC-8      Main Display (7 seg)
+[  ] 1 irlz44n   to-220      Audio Power Cutoff 
+
+Resistores (SMD 0805):
+Qtd.    Valor (Ohms)
+1       390       RC Filter
+
+Capacitores:
+Qtd.    Valor (Farads)
+1       .1uF      RC Filter
