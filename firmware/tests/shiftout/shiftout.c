@@ -12,21 +12,18 @@ static void set_time(uchar h, uchar m, uchar s);
 
 static void output(uchar data)
 {
-    PORTD &= (uchar)~_BV(5);
+    OUTPUT &= (uchar) ~_BV(LATCH_PIN);
     fast_shiftout_msbf(data);
-    PORTD |= (uchar)_BV(5);
+    OUTPUT |= (uchar) _BV(LATCH_PIN);
 }
 
 
 int main(void)
 {
     // Set the outputs
-    DDRD |= (uchar)(_BV(DATA_PIN) | _BV(CLOCK_PIN) | _BV(5));
+    *(&OUTPUT - 1) |= (uchar)(_BV(DATA_PIN) | _BV(CLOCK_PIN) | _BV(LATCH_PIN));
     DDRC |= (uchar)0x1F;
-
-    // Light up portb 5 (aka digital pin 13) to show we are alive...
     DDRB |= (uchar)_BV(5);
-    PORTB |= _BV(5);
 
     // Setup the timer interrupt
     TCCR0A |= _BV(WGM01);  // Set timer0 mode to CTC
@@ -36,7 +33,7 @@ int main(void)
     // Fire an interrupt at 8KHz
     OCR0A = 250; // ~300Hz (60Hz/disp)
 
-    set_time(6, 33, 0);
+    set_time(7, 4, 0);
     digits[4] = (uchar) ~0;
 
     sei();
@@ -125,6 +122,7 @@ ISR(TIMER0_COMPA_vect)
     if (++div == 8000) {
         update_clock();
         digits[4] ^= _BV(4);
+        PORTB ^= _BV(5);
         div = 0;
     } else if (div == 4000) {
         digits[4] ^= _BV(4);
