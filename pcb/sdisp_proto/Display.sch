@@ -216,7 +216,7 @@ F 1 "CONN_02X05" H 5250 2974 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 5250 1450 50  0001 C CNN
 F 3 "" H 5250 1450 50  0000 C CNN
 	1    5250 2650
-	-1   0    0    -1  
+	1    0    0    -1  
 $EndComp
 NoConn ~ 4600 1800
 $Comp
@@ -230,36 +230,36 @@ F 3 "" H 6000 1200 50  0000 C CNN
 	1    6000 1200
 	0    1    -1   0   
 $EndComp
-Text GLabel 5500 2450 2    60   Input ~ 0
+Text GLabel 5500 2850 2    60   Input ~ 0
 D0
-Text GLabel 5500 2550 2    60   Input ~ 0
+Text GLabel 5500 2750 2    60   Input ~ 0
 D1
 Text GLabel 5500 2650 2    60   Input ~ 0
 D2
-Text GLabel 5500 2750 2    60   Input ~ 0
+Text GLabel 5500 2550 2    60   Input ~ 0
 D3
-Text GLabel 5500 2850 2    60   Input ~ 0
+Text GLabel 5500 2450 2    60   Input ~ 0
 D4
 $Comp
 L VCC #PWR02
 U 1 1 5678FB4C
-P 5000 2550
-F 0 "#PWR02" H 5000 2400 50  0001 C CNN
-F 1 "VCC" V 5000 2700 50  0000 L CNN
-F 2 "" H 5000 2550 50  0000 C CNN
-F 3 "" H 5000 2550 50  0000 C CNN
-	1    5000 2550
+P 5000 2450
+F 0 "#PWR02" H 5000 2300 50  0001 C CNN
+F 1 "VCC" V 5000 2600 50  0000 L CNN
+F 2 "" H 5000 2450 50  0000 C CNN
+F 3 "" H 5000 2450 50  0000 C CNN
+	1    5000 2450
 	0    -1   -1   0   
 $EndComp
 $Comp
 L GND #PWR03
 U 1 1 5678FB77
-P 5000 2450
-F 0 "#PWR03" H 5000 2200 50  0001 C CNN
-F 1 "GND" V 5000 2300 50  0000 R CNN
-F 2 "" H 5000 2450 50  0000 C CNN
-F 3 "" H 5000 2450 50  0000 C CNN
-	1    5000 2450
+P 5000 2750
+F 0 "#PWR03" H 5000 2500 50  0001 C CNN
+F 1 "GND" V 5000 2600 50  0000 R CNN
+F 2 "" H 5000 2750 50  0000 C CNN
+F 3 "" H 5000 2750 50  0000 C CNN
+	1    5000 2750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -432,7 +432,7 @@ Text GLabel 5000 2850 0    60   Input ~ 0
 Data
 Text GLabel 5000 2650 0    60   Input ~ 0
 Clock
-Text GLabel 5000 2750 0    60   Input ~ 0
+Text GLabel 5000 2550 0    60   Input ~ 0
 Latch
 Text GLabel 4000 900  2    60   Input ~ 0
 A
